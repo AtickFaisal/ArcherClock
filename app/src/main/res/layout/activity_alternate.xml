@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.quanfield.software.archerclock.AlternateActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Preparation Time"
+            android:layout_marginEnd="8dp"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:layout_marginTop="16dp"
+            android:padding="8dp"
+            android:textColor="#EEEEEE"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="32dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/clock1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="clockOneClicked"
+                android:alpha="1"
+                android:padding="16dp">
+
+                <devadvance.circularseekbar.CircularSeekBar
+                    android:id="@+id/timer_clock_1"
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    app:circle_color="#EEEEEE"
+                    app:circle_progress_color="@color/preparationTime"
+                    app:circle_x_radius="128dp"
+                    app:circle_y_radius="128dp"
+                    app:circle_stroke_width="3dp"
+                    app:end_angle="270"
+                    app:pointer_color="@color/preparationTime"
+                    app:pointer_halo_color="@color/preparationTime"
+                    app:pointer_radius="1dp"
+                    app:start_angle="270"
+                    app:use_custom_radii="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/criticalTime"
+                    android:text="A"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="32dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/timer_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#EEEEEE"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text=" "
+                    android:textSize="28sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#BDBDBD"
+                    android:text="Remaining"
+                    android:textSize="12sp"
+                    android:layout_marginTop="24dp"
+                    tools:ignore="HardcodedText" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/clock2"
+                android:onClick="clockTwoClicked"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:padding="16dp">
+
+                <devadvance.circularseekbar.CircularSeekBar
+                    android:id="@+id/timer_clock_2"
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    app:circle_color="#EEEEEE"
+                    app:circle_progress_color="@color/preparationTime"
+                    app:circle_x_radius="128dp"
+                    app:circle_y_radius="128dp"
+                    app:circle_stroke_width="3dp"
+                    app:end_angle="270"
+                    app:pointer_color="@color/preparationTime"
+                    app:pointer_halo_color="@color/preparationTime"
+                    app:pointer_radius="1dp"
+                    app:start_angle="270"
+                    app:use_custom_radii="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/criticalTime"
+                    android:text="B"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="32dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/timer_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#EEEEEE"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text=" "
+                    android:textSize="28sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#BDBDBD"
+                    android:text="Remaining"
+                    android:textSize="12sp"
+                    android:layout_marginTop="24dp"
+                    tools:ignore="HardcodedText" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/replay"
+                android:onClick="onClickReset"
+                android:padding="16dp"
+                android:background="@drawable/circle_button_layout"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/account_convert"
+                android:padding="16dp"
+                android:onClick="onClickTimer"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/start_button"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/volume_high"
+                android:padding="16dp"
+                android:onClick="onClickBuzzer"
+                android:background="@drawable/circle_button_layout"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/settings_button_alternate"
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        android:onClick="onClickSettings"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_layout"
+        android:padding="8dp"/>
+
+</FrameLayout>

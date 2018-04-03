@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/connection"
+        android:icon="@drawable/signal_off"
+        android:title="@string/connection"
+        app:showAsAction="ifRoom" />
+</menu>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/connection"
+        android:icon="@drawable/signal_off"
+        android:title="@string/connection"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/alternate"
+        android:icon="@drawable/timer"
+        android:title="Normal Mode"
+        app:showAsAction="ifRoom"
+        tools:ignore="HardcodedText" />
+
+    <item android:id="@+id/about"
+        android:title="About"
+        tools:ignore="HardcodedText" />
+</menu>

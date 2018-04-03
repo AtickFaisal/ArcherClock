@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.quanfield.software.archerclock.SettingsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Preparation Time"
+                android:textColor="#EEEEEE"
+                android:layout_gravity="center_vertical"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
+
+            <Spinner
+                android:id="@+id/prep_time_spinner"
+                android:layout_width="128dp"
+                android:layout_weight="0.2"
+                android:layout_height="48dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Main Time"
+                android:textColor="#EEEEEE"
+                android:layout_gravity="center_vertical"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
+
+            <Spinner
+                android:id="@+id/main_time_spinner"
+                android:layout_width="128dp"
+                android:layout_weight="0.2"
+                android:layout_height="48dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_layout"
+        android:text="Save Settings"
+        android:padding="8dp"
+        tools:ignore="HardcodedText" />
+
+</FrameLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.quanfield.software.archerclock.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/delay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="0"
+            android:visibility="invisible"
+            android:layout_marginEnd="8dp"
+            tools:ignore="HardcodedText" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <devadvance.circularseekbar.CircularSeekBar
+                android:id="@+id/timer_clock"
+                android:layout_width="256dp"
+                android:layout_height="256dp"
+                android:layout_gravity="center"
+                app:circle_color="#EEEEEE"
+                app:circle_progress_color="@color/preparationTime"
+                app:circle_x_radius="256dp"
+                app:circle_y_radius="256dp"
+                app:circle_stroke_width="3dp"
+                app:end_angle="270"
+                app:pointer_color="@color/preparationTime"
+                app:pointer_halo_color="@color/preparationTime"
+                app:pointer_radius="2dp"
+                app:start_angle="270"
+                app:use_custom_radii="true" />
+
+            <TextView
+                android:id="@+id/timer_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preparation\nTime"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="48dp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/timer_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#EEEEEE"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text=" "
+                android:textSize="56sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/remaining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remaining"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textColor="#EEEEEE"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="176dp"
+                tools:ignore="HardcodedText" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/reset_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/replay"
+                android:onClick="onClickReset"
+                android:padding="16dp"
+                android:background="@drawable/circle_button_layout"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/timer_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/play"
+                android:padding="16dp"
+                android:onClick="onClickTimer"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/start_button"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/buzzer_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickBuzzer"
+                android:src="@drawable/volume_high"
+                android:padding="16dp"
+                android:background="@drawable/circle_button_layout"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/settings_button"
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        android:onClick="onClickSettings"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_layout"
+        android:padding="8dp"/>
+
+</FrameLayout>

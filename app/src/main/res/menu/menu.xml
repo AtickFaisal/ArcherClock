@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/connection"
+        android:icon="@drawable/signal_off"
+        android:title="@string/connection"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/alternate"
+        android:icon="@drawable/account_convert"
+        android:title="Alternate Mode"
+        app:showAsAction="ifRoom"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/player"
+        android:title="Player"
+        tools:ignore="HardcodedText">
+        <menu>
+            <item
+                android:id="@+id/player_a"
+                android:title="A" />
+            <item
+                android:id="@+id/player_b"
+                android:title="B" />
+            <item
+                android:id="@+id/player_c"
+                android:title="C" />
+            <item
+                android:id="@+id/player_d"
+                android:title="D" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/about"
+        android:title="About"
+        tools:ignore="HardcodedText" />
+</menu>
